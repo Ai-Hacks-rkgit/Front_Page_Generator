@@ -4,7 +4,16 @@ import time
 import os
 
 # Hide the default Streamlit menu
-
+st.markdown(
+    """
+    <style>
+    #MainMenu {visibility: hidden;}
+    #GithubIcon {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.write("""
 # Lab File Front Page Generator
