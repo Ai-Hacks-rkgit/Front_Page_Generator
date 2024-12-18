@@ -21,8 +21,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
-
 st.write("""
 # Lab File Front Page Generator
 Create a front page for your lab assignment.
@@ -40,6 +38,15 @@ if st.button("Generate PDF"):
     Generate_pdf(name,roll_no,department,session,teacher,subject,year)
 
     outputfile=name+"_"+subject+"_"+"file"+".pdf"
+
+    progress_text = "Generating PDF. Please wait."
+    my_bar = st.progress(0, text=progress_text)
+
+    for percent_complete in range(100):
+        time.sleep(0.01)
+        my_bar.progress(percent_complete + 1, text=progress_text)
+    time.sleep(1)
+    my_bar.empty()
 
     with open(outputfile, "rb") as file:
         btn = st.download_button(
