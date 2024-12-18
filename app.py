@@ -3,6 +3,12 @@ from pdf_generator import Generate_pdf
 import time
 import os
 
+
+st.set_page_config(
+    page_title="Front Page Generator",
+    page_icon=":smart_toy:" 
+)
+
 # Hide the default Streamlit menu
 st.markdown(
     """
@@ -15,10 +21,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.set_page_config(
-    page_title="Front Page Generator",
-    page_icon=":smart_toy:" 
-)
+
 
 st.write("""
 # Lab File Front Page Generator
