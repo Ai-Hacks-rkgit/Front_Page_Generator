@@ -15,6 +15,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.set_page_config(
+    page_title="Front Page Generator",
+    page_icon=":smart_toy:" 
+)
+
 st.write("""
 # Lab File Front Page Generator
 Create a front page for your lab assignment.
