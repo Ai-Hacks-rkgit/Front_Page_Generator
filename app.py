@@ -31,6 +31,8 @@ st.markdown(
 #     """,
 #     unsafe_allow_html=True
 # )
+if "github_link" not in st.session_state:
+    st.session_state.github_link = "https://github.com/your-username/your-repository" 
 
 st.write("""
 # Lab File Front Page Generator
