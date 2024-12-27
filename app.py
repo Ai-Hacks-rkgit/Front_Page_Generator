@@ -8,31 +8,19 @@ st.set_page_config(
     page_title="Front Page Generator",
     page_icon=":material/smart_toy:" 
 )
+
+)
+# Hide the default Streamlit menu
 st.markdown(
     """
     <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
-        display: none;
-    }
+    #MainMenu {visibility: hidden;}
+    #GithubIcon {visibility: hidden;}
+    footer {visibility: hidden;}
     </style>
     """,
     unsafe_allow_html=True
 )
-# Hide the default Streamlit menu
-# st.markdown(
-#     """
-#     <style>
-#     #MainMenu {visibility: hidden;}
-#     #GithubIcon {visibility: hidden;}
-#     footer {visibility: hidden;}
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-if "github_link" not in st.session_state:
-    st.session_state.github_link = "https://github.com/your-username/your-repository" 
 
 st.write("""
 # Lab File Front Page Generator
