@@ -8,8 +8,6 @@ st.set_page_config(
     page_title="Front Page Generator",
     page_icon=":material/smart_toy:" 
 )
-
-)
 # Hide the default Streamlit menu
 st.markdown(
     """
